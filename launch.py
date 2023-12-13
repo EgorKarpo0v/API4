@@ -4,6 +4,7 @@ from datetime import datetime
 import os
 import requests
 
+
 def launch_img(url, file_path, params=None):
     response = requests.get(url, params=params)
     response.raise_for_status()
