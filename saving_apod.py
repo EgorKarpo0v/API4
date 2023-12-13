@@ -31,8 +31,12 @@ def get_file_format(url):
     extention = os.path.splitext(fullname)
     file_name, extention_file = extention
     return extention_file, file_name
+
+
 def main():
     get_APOD_img()
     get_file_format(url)
+
+
 if __name__ == "__main__":
     main()
