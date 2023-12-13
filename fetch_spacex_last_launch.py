@@ -5,6 +5,7 @@ import requests
 from launch import launch_img
 import argparse
 
+
 def fetch_spacex_last_launch():
     url = 'https://api.spacexdata.com/v5/launches/5eb87d47ffd86e000604b38a'
     response = requests.get(url)
@@ -16,12 +17,13 @@ def fetch_spacex_last_launch():
         launch_img(img, path)
 
 
-
 def main():
     fetch_spacex_last_launch()
     parser = argparse.ArgumentParser(
         description='Описание что делает программа'
     )
     parser.add_argument('--id', help='Напишите id запуска SpaceX', default = "5eb87d47ffd86e000604b38a")
+
+
 if __name__ == "__main__":
     main()
