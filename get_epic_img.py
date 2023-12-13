@@ -4,6 +4,8 @@ from datetime import datetime
 import os
 import requests
 from launch import launch_img
+
+
 def get_Earth_image():
     url = "https://api.nasa.gov/EPIC/api/natural/images"
     params = {
@@ -26,5 +28,7 @@ def get_Earth_image():
 
 def main():
     get_Earth_image()
+
+
 if __name__ == "__main__":
     main()
