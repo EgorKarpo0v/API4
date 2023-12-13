@@ -6,7 +6,7 @@ import requests
 from launch import launch_img
 
 
-def get_Earth_image():
+def get_earth_image():
     url = "https://api.nasa.gov/EPIC/api/natural/images"
     params = {
         "api_key":"7BYLApy7LKcz3stq03ImiatyG0srY3D629q6rSmE",
@@ -22,12 +22,10 @@ def get_Earth_image():
         link = f"https://api.nasa.gov/EPIC/archive/natural/{formatted_date}/png/{epic_name}.png"
         file_path = os.path.join("images", f"{epic_name}.png")
         download_img(link, file_path, params)
-        print(epic_name)
-        print(formatted_date)
-
+        
 
 def main():
-    get_Earth_image()
+    get_earth_image()
 
 
 if __name__ == "__main__":
