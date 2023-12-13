@@ -21,7 +21,7 @@ def get_APOD_img():
                 nasa_img = img["url"]
         extention_file, file_name = get_file_format(nasa_img)
         file_path = os.path.join("images", f"{file_name}{extention_file}")
-        launch_img(nasa_img, file_path)
+        download_img(nasa_img, file_path)
 
 
 def get_file_format(url):
