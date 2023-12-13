@@ -14,7 +14,7 @@ def fetch_spacex_last_launch(launch_id):
     for img_number, img in enumerate(spacex_imgs):
         file_name = f"spacex_{img_number}.jpeg"
         path = os.path.join("images", file_name)
-        launch_img(img, path)
+        download_img(img, path)
 
 
 def main():
