@@ -5,7 +5,7 @@ import os
 import requests
 
 
-def get_APOD_img():
+def get_space_img():
     url = "https://api.nasa.gov/planetary/apod"
     params = {
         "api_key": "7BYLApy7LKcz3stq03ImiatyG0srY3D629q6rSmE",
@@ -34,7 +34,7 @@ def get_file_format(url):
 
 
 def main():
-    get_APOD_img()
+    get_space_img()
     get_file_format(url)
 
 
