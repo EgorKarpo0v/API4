@@ -6,8 +6,8 @@ from launch import launch_img
 import argparse
 
 
-def fetch_spacex_last_launch():
-    url = 'https://api.spacexdata.com/v5/launches/5eb87d47ffd86e000604b38a'
+def fetch_spacex_last_launch(launch_id):
+    url = f'https://api.spacexdata.com/v5/launches/{launch_id}'
     response = requests.get(url)
     response.raise_for_status()
     spacex_imgs = response.json()["links"]["flickr"]["original"]
@@ -18,11 +18,12 @@ def fetch_spacex_last_launch():
 
 
 def main():
-    fetch_spacex_last_launch()
     parser = argparse.ArgumentParser(
-        description='Описание что делает программа'
+        description='Програма позволяет получать фотографии запуска SpaceX'
     )
-    parser.add_argument('--id', help='Напишите id запуска SpaceX', default = "5eb87d47ffd86e000604b38a")
+    parser.add_argument('--id', dest="launch_id", help='Напишите id запуска SpaceX', default = "5eb87d47ffd86e000604b38a")
+    args = parser.parse_args()
+    fetch_spacex_last_launch(args.launch_id)
 
 
 if __name__ == "__main__":
