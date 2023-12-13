@@ -56,7 +56,7 @@ pip install -r requirements.txt
 1. 
     Вот пример для того, чтобы скачать фотки SpaceX:
     ```
-    python download_spacex_pictures.py
+    python fetch_spacex_last_launch.py
     ```
 2. 
     Пример для того, чтобы скачать фотки NASA_APOD:
@@ -66,7 +66,7 @@ pip install -r requirements.txt
 3. 
     Пример для того, чтобы скачать фотки NASA_EPIC:
     ```
-    python download_nasa_epic_pictures.py
+    python get_epic_img.py
     ```
 4. 
     Пример для того, чтобы публиковать одну фотку(Или одну из любой папки на Ваш выбор, или вообще любую картинку на Ваш выбор):
