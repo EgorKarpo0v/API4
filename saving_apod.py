@@ -4,7 +4,14 @@ from launch import launch_img
 import os
 import requests
 
-
+def get_file_format(url):
+    decoded_url = unquote(url)
+    parsed_url = urlparse(decoded_url)
+    file_path, fullname = os.path.split(parsed_url.path)
+    extention = os.path.splitext(fullname)
+    file_name, extention_file = extention
+    return extention_file, file_name
+    
 def get_space_img():
     url = "https://api.nasa.gov/planetary/apod"
     api_key = os.enivron[API_KEY]
@@ -26,18 +33,12 @@ def get_space_img():
         download_img(nasa_img, file_path)
 
 
-def get_file_format(url):
-    decoded_url = unquote(url)
-    parsed_url = urlparse(decoded_url)
-    file_path, fullname = os.path.split(parsed_url.path)
-    extention = os.path.splitext(fullname)
-    file_name, extention_file = extention
-    return extention_file, file_name
+
 
 
 def main():
     get_space_img()
-    get_file_format(url)
+    
 
 
 if __name__ == "__main__":
