@@ -7,6 +7,7 @@ from time import sleep
 
 def main():
     time_sleep = 600
+    chat_id = os.geten
     chat_id = "@SpaceImages11"
     token = os.environ["TG_TOKEN"]
     bot = telegram.Bot(token=token)
