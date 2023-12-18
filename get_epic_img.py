@@ -9,9 +9,10 @@ from launch import launch_img
 def get_earth_image():
     url = "https://api.nasa.gov/EPIC/api/natural/images"
     api_key = os.enivron["API_KEY"]
+    count = 5
     params = {
         "api_key":api_key,
-        "count": 5
+        "count": count
     }
     response = requests.get(url, params=params)
     response.raise_for_status()
