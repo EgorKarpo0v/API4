@@ -6,7 +6,8 @@ from time import sleep
 
 
 chat_id = "@SpaceImages11"
-bot = telegram.Bot(token='6571182137:AAG6ZCJRwEF00pUTaXFlu9ay37duginxM5g')
+token = os.environ["TG_TOKEN"]
+bot = telegram.Bot(token=token)
 while True:
     folder = "images"
     files = listdir(folder)
