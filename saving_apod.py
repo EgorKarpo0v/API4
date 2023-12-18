@@ -7,8 +7,9 @@ import requests
 
 def get_space_img():
     url = "https://api.nasa.gov/planetary/apod"
+    api_key = os.enivron[API_KEY]
     params = {
-        "api_key": "7BYLApy7LKcz3stq03ImiatyG0srY3D629q6rSmE",
+        "api_key": api_key,
         "count": 5
     }
     response = requests.get(url, params=params)
