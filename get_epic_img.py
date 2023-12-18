@@ -16,7 +16,7 @@ def get_earth_image():
     }
     response = requests.get(url, params=params)
     response.raise_for_status()
-    epic_img = response.json()
+    epic_imgs = response.json()
     for img in epic_img:
         epic_name = img["image"]
         epic_date = img["date"]
