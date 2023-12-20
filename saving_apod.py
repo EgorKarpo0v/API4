@@ -12,9 +12,8 @@ def get_file_format(url):
     file_name, extention_file = extention
     return extention_file, file_name
     
-def get_space_img():
+def get_space_img(api_key):
     url = "https://api.nasa.gov/planetary/apod"
-    api_key = os.enivron[API_KEY]
     count = 5
     params = {
         "api_key": api_key,
@@ -33,13 +32,10 @@ def get_space_img():
         download_img(nasa_img, file_path)
 
 
-
-
-
 def main():
-    get_space_img()
+    api_key = os.enivron["API_KEY"]
+    get_space_img(api_key)
     
-
-
+    
 if __name__ == "__main__":
     main()
