@@ -7,7 +7,7 @@ from time import sleep
 
 def main():
     sleep_time = 600
-    chat_id = os.enivron[CHAT_ID]
+    chat_id = os.enivron["CHAT_ID"]
     token = os.environ["TG_TOKEN"]
     bot = telegram.Bot(token=token)
     while True:
