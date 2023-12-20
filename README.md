@@ -71,7 +71,7 @@ pip install -r requirements.txt
 4. 
     Пример для того, чтобы публиковать фотки в Телеграм
     ```
-    python Telegram.py
+    python Telegram_bot.py
     ```
 
 ## Дополнение 
