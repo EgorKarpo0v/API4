@@ -6,9 +6,8 @@ import requests
 from launch import launch_img
 
 
-def get_earth_image():
+def get_earth_image(api_key):
     url = "https://api.nasa.gov/EPIC/api/natural/images"
-    api_key = os.enivron["API_KEY"]
     count = 5
     params = {
         "api_key":api_key,
@@ -27,8 +26,9 @@ def get_earth_image():
         
 
 def main():
-    get_earth_image()
-
+    api_key = os.enivron["API_KEY"]
+    get_earth_image(api_key)
+    
 
 if __name__ == "__main__":
     main()
