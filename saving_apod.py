@@ -33,7 +33,7 @@ def get_space_img(api_key):
 
 
 def main():
-    api_key = os.enivron["API_KEY"]
+    api_key = os.enivron["NASA_API_KEY"]
     get_space_img(api_key)
     
     
