@@ -18,7 +18,7 @@ def main():
             path = os.path.join(folder, file)
             with open(path,"rb") as f:
                 bot.send_document(chat_id=chat_id, document = f)
-            sleep(time_sleep)
+            sleep(sleep_time)
 
 
 if __name__ == "__main__":
