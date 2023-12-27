@@ -1,6 +1,7 @@
 from urllib.parse import unquote, urlparse
 from pathlib import Path
 from launch import launch_img
+from dotenv import load_dotenv
 import os
 import requests
 
@@ -33,6 +34,7 @@ def get_space_imgs(api_key):
 
 
 def main():
+    load_dotenv()
     api_key = os.enivron["NASA_API_KEY"]
     get_space_imgы(api_key)
     
