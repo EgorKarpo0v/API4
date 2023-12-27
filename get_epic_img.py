@@ -2,9 +2,10 @@ from urllib.parse import unquote, urlparse
 from pathlib import Path
 from datetime import datetime
 from dotenv import load_dotenv
+from launch import launch_img
 import os
 import requests
-from launch import launch_img
+
 
 
 def get_earth_images(api_key):
