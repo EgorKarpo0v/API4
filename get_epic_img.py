@@ -1,6 +1,7 @@
 from urllib.parse import unquote, urlparse
 from pathlib import Path
 from datetime import datetime
+from dotenv import load_dotenv
 import os
 import requests
 from launch import launch_img
@@ -26,6 +27,7 @@ def get_earth_images(api_key):
         
 
 def main():
+    load_dotenv()
     api_key = os.enivron["API_KEY"]
     get_earth_images(api_key)
     
