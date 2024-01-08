@@ -29,7 +29,7 @@ def get_earth_images(api_key):
 
 def main():
     load_dotenv()
-    api_key = os.enivron["API_KEY"]
+    api_key = os.enivron["NASA_TOKEN"]
     get_earth_images(api_key)
     
 
